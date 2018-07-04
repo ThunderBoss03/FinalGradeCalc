@@ -1,0 +1,29 @@
+/**
+ * @author varun 
+ */
+
+package finals;
+import java.util.Scanner;
+import static java.lang.System.out;
+public class test {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		out.println("This program will tell you what grade yoyu need to get on the final to have a 90 average!");
+		out.println();
+		out.println("Enter your grade for the first marking period: ");
+		int x = in.nextInt();
+		out.println("Enter your grade for the second marking period: ");
+		int y = in.nextInt();
+		out.println("Enter your grade for the third marking period: ");
+		int z = in.nextInt();
+		out.println("Enter your grade for the fourth marking period: ");
+		int a = in.nextInt();
+		out.println("What would you like to finish the marking period with?");
+		int ab = in.nextInt();
+		FinalGrade test = new FinalGrade(x,y,z,a);
+		out.println("To get a 90, you need at least a " + test.needOnFinal(ab));
+		out.println(test.highestGrade());
+
+	}
+
+}
