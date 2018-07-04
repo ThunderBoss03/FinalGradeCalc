@@ -1,0 +1,66 @@
+//this is the class
+/**
+ * 
+ * @author varun
+ *
+ */
+package finals;
+
+public class FinalGrade {
+
+	private int MP1;
+	private int MP2;
+	private int MP3;
+	private int MP4;
+	private int x;
+	
+	public FinalGrade(int mp1, int mp2, int mp3, int mp4) {
+		MP1 = mp1;
+		MP2 = mp2;
+		MP3 = mp3;
+		MP4 = mp4;
+	}
+
+	public long needOnFinal(int x) {
+	while (true) {	
+		long h = 0;;
+		for (double i = 0; i <= 100; i++) {
+			double num = (MP1 + MP2 + MP3 + MP4 + i)/5;
+			if (num == 90) {
+				//System.out.println("to get at least a 90, you need a : " + Math.round(i));
+				h = Math.round(i);
+				return h;
+			}
+			if (num == x) {
+				//System.out.println(" To finish with a " + x + "you need to get a : " +Math.round(i));
+				h = Math.round(i);
+				return h;
+			}
+			}
+		return h;	
+			
+		}
+	
+	}
+	
+	public String highestGrade() {
+		while(true) {
+		for (double i = 0; i <= 100; i++) {
+			double num = (MP1 + MP2 + MP3 + MP4 + i)/5;
+			if (num == 100) {
+				System.out.println(Math.round(i));
+			}
+			else {
+				double num1 = (MP1 + MP2 + MP3 + MP4 + 100)/5;
+				long l = Math.round(num1);
+				System.out.println("You cannot get higher than a " + l);
+				break;
+			}
+			
+		}
+		break;
+	}
+		return " ";
+	}
+	
+}
