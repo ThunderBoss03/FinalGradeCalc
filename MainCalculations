@@ -1,0 +1,61 @@
+//this is the class
+/**
+ * 
+ * @author varun
+ *
+ */
+package finals;
+
+public class FinalGrade {
+
+	private int MP1, MP2, MP3, MP4;
+	private long total;
+	
+	public FinalGrade(int mp1, int mp2, int mp3, int mp4) {
+		MP1 = mp1;
+		MP2 = mp2;
+		MP3 = mp3;
+		MP4 = mp4;
+	}
+	
+	public String highestGrade() {
+		while(true) {
+		for (double i = 0; i <= 100; i++) {
+			double num = (MP1 + MP2 + MP3 + MP4 + i)/5;
+			if (num == 100) {
+				System.out.println(Math.round(i));
+			}
+			else {
+				double num1 = (MP1 + MP2 + MP3 + MP4 + 100)/5;
+				total = Math.round(num1);
+				System.out.println("You cannot get higher than a " + total);
+				break;
+			}
+			
+		}
+		break;
+	}
+		return " ";
+	}
+
+	public int needOnFinal()
+	{
+		int i = 0;
+		if(Math.round((MP1 + MP2 + MP3 + MP4 + 100)/5 ) >= 90)
+		{
+			for (i = 0; i >= -1 ; i++)
+			{
+				if ((MP1 + MP2 + MP3 + MP4 + i)/5 == 90) {
+					return i;
+				}
+				else
+					continue;	
+			}
+		}
+		else
+			System.out.println("impossible to end with a 90");
+		return i;
+	}
+	
+	
+}
